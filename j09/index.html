@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		<script>
+			function	getBig() {
+				balon = document.getElementById('balon');
+				switch (balon.style.backgroundColor) {
+					case "red":
+						balon.style.backgroundColor = "green";
+						balon.style.width = (parseInt(balon.style.width) + 10).toString() + "px";
+						balon.style.height = (parseInt(balon.style.height) + 10).toString() + "px";
+						balon.style.borderRadius = (parseInt(balon.style.borderRadius) + 50).toString() + "px";
+						break;
+					case "green":
+						balon.style.backgroundColor = "blue";
+						balon.style.width = (parseInt(balon.style.width) + 10).toString() + "px";
+						balon.style.height = (parseInt(balon.style.height) + 10).toString() + "px";
+						balon.style.borderRadius = (parseInt(balon.style.borderRadius) + 50).toString() + "px";
+						break;
+					case "blue":
+						balon.style.backgroundColor = "red";
+						balon.style.width = (parseInt(balon.style.width) + 10).toString() + "px";
+						balon.style.height = (parseInt(balon.style.height) + 10).toString() + "px";
+						balon.style.borderRadius = (parseInt(balon.style.borderRadius) + 50).toString() + "px";
+						break;
+				}
+			}
+			function	test() {
+				balon.style.width = (parseInt(balon.style.width) - 5).toString() + "px";
+				balon.style.height = (parseInt(balon.style.height) - 5).toString() + "px";
+				balon.style.borderRadius = (parseInt(balon.style.borderRadius) - 20).toString() + "px";
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 200px;height: 200px;background-color: red; border-radius: 100px;" id="balon" onclick="getBig()" onmouseout="test()"></div>
+	</body>
+</html>
